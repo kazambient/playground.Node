@@ -5,12 +5,14 @@
     <script src="/socket.io/socket.io.js"></script>
 <script>
   var socket = io.connect('http://localhost');
+  var time=0;
   socket.on('news', function (data) {
-      document.getElementById("data").innerHTML=data["hello"];
+      document.getElementById("data").innerHTML=data["hello"]-time;
     console.log(data);
-    
+    time = data["hello"];
+    socket.emit('my other event', { my: time });
   });
-  socket.emit('my other event', { my: 'Hello' });
+  
 </script>
 
 <body>
