@@ -1,0 +1,2 @@
+Hello {{name}},{{> testinc}}
+Welcome to {{text}}

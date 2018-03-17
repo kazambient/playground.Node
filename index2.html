@@ -1,11 +1,9 @@
-<html>
-
-<head>
+<html><head>
   <meta http-equiv="content-type" content="text/html; charset=windows-1252">
-  <link href="index_files/main.css" rel="stylesheet" type="text/css">
+  <link href="index2_files/main.css" rel="stylesheet" type="text/css">
   <script src="/socket.io/socket.io.js"></script>
   <script>
-    var socket = io.connect('192.168.0.12');
+    var socket = io.connect('http://localhost');
     var time = 0;
     socket.on('news', function (data) {
       document.getElementById("data").innerHTML = data["hello"] - time;
@@ -23,7 +21,7 @@
       <br>Las Vegas</h1>
     <nav class="horz-nav">
       <ul>
-        <li>linhellok1</li>
+        <li>link1</li>
         <li>link2</li>
         <li>link3</li>
         <li>link3</li>
@@ -34,17 +32,18 @@
   </header>
   <main>
     <header>
-      <h3 id="data">Some Data will hkghgjhgh hkg jhgh appear here later</h3>
+      <h3 id="data">Some Data will appear here later</h3>
     </header>
-    <artical>
-      <header>
-
-      </header>
+    <artical contenteditable="true">
+<header contenteditable="true">
+imhello i have been edited <br>new paragraph<br></header>
+      <p>This is some test text</p>
+<ul><li>list<br></li></ul>
       <footer>
         
       </footer>
     </artical>
   </main>
-</body>
 
-</html>
+
+</body></html>
